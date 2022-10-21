@@ -12,14 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.femoutela.curso.entities.User;
 import com.femoutela.curso.services.UserService;
 
+
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class ProductResource {
 
 	@Autowired 
 	private UserService service;
 
 	@GetMapping
+	
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
 		return ResponseEntity.ok().body(list);
